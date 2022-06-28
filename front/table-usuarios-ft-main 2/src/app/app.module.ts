@@ -5,11 +5,19 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { TableComponent } from './component/table/table.component';
+import { CriarComponent } from './criar/criar.component';
+import { EditarComponent } from './editar/editar.component';
+import { FooterComponent } from './footer/footer.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TableComponent
+    TableComponent,
+    CriarComponent,
+    EditarComponent,
+    FooterComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

@@ -13,40 +13,31 @@
       <table class="table">
         <thead>
         <tr>
+          <th scope="col">#</th>
           <th scope="col">Nome</th>
           <th scope="col">Idade</th>
         </tr>
         </thead>
         <tbody>
+          <tr *ngFor="let usuario of usuarios; index as i">
+            <th scope="row">{{ usuario.id }}</th>
         <tr *ngFor="let usuario of usuarios">
-          <td>{{ usuario.nomeUsuario }}</td>
-          <td>{{ usuario.idadeUsuario }}</td>
+          <td>{{ usuario.nome}}</td>
+          <td>{{ usuario.idade }}</td>
         </tr>
         </tbody>
       </table>
     </div>
     <div class="col-4">
-      <form>
-        <div class="mb-3">
-          <label for="nameInput" class="form-label">Nome</label>
-          <input
-            type="nome"
-            class="form-control"
-            id="nameInput"
-            aria-describedby="nameHelp"
-          />
-        </div>
-        <div class="mb-3">
-          <label for="ageInput" class="form-label"
-          >Idade</label
-          >
-          <input
-            type="idade"
-            class="form-control"
-            id="ageInput"
-          />
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+      <form (ngSubmit)="atualizar()" id="form">
+        <input id="nomeUsuario" name="nomeUsuario" type="text" [(ngModel)]="nomeUsuario" #name="ngModel" placeholder="Insira o nome"/>
+        <input id="idadeUsuario" name="idadeUsuario" type="text" [(ngModel)]="idadeUsuario" #name="ngModel" placeholder="Insira a idade"/>
+        <button type="submit">
+          Salvar
+        </button>
+        <button type="button">
+          Limpar
+        </button>
       </form>
     </div>
   </div>

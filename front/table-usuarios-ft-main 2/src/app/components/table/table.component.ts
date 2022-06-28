@@ -9,7 +9,9 @@ import {UsuarioService} from 'src/app/entities/usuario/usuario.service';
 export class TableComponent implements OnInit {
 usuarios : Usuario [] = [];
 
-  constructor(private usuarioservice: UsuarioService) { }
+  constructor(private usuarioservice: UsuarioService) { 
+    this.getAllUsers();
+  }
 
 //
 //    nomeUsuario ='';

@@ -1,5 +1,5 @@
 export interface Usuario {
-  idUsuario: number;
-  nomeUsuario: string;
-  idadeUsuario: string;
+  id: number;
+  nome: string;
+  idade: string;
 }
